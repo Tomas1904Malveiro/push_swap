@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/19 14:53:44 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:53:36 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ typedef struct stack
 t_stack	*stack_new(int size);
 void	stack_free(t_stack *s);
 int		stack_is_sorted(t_stack *s);
-int	is_number(char *s);
-int	is_duplicate(t_stack *s, int n);
+int		is_number(char *s);
+int		is_duplicate(t_stack *s, int n);
 void	error_exit(t_stack *s);
 void	sa(t_stack *a);
 void	sb(t_stack *b);
