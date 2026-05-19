@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbezerra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 14:22:32 by kbezerra         ###   ########.fr       */
+/*   Updated: 2026/05/19 15:50:11 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 #include <stdio.h>
 int main(int argc, char **argv)
 {
+	printf("hello");
 	printf("hello");
 }
