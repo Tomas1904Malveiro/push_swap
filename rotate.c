@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
+/*   By: kbezerra <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 15:50:11 by tochaves         ###   ########.fr       */
+/*   Created: 2026/05/19 17:07:28 by kbezerra          #+#    #+#             */
+/*   Updated: 2026/05/19 17:07:31 by kbezerra         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
-int main(int argc, char **argv)
-{
-	int	i;
 
-	i = 0;
-	if (argc > 1)
-	{
-		
-	}
+void	ra(t_stack *a)
+{
+
+}
+
+void	rb(t_stack *b)
+{
+
+}
+
+void	rr(t_stack *a, t_stack *b)
+{
+	
 }

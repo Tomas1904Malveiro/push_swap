@@ -28,6 +28,7 @@ void	stack_free(t_stack *s);
 int		stack_is_sorted(t_stack *s);
 int		is_number(char *s);
 int		is_duplicate(t_stack *s, int n);
+long	compute_disorder(t_stack *a);
 void	error_exit(t_stack *s);
 void	sa(t_stack *a);
 void	sb(t_stack *b);
