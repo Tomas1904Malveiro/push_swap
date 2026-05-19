@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   compute_disorder.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbezerra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:34:27 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 14:34:29 by kbezerra         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:11:43 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ long	compute_disorder(t_stack *a)
 	long	j;
 
 	if (a->size <= 1)
-		return (0,0);
+		return (0, 0);
 	mistakes = 0;
 	total_pairs = 0;
 	i = 0;

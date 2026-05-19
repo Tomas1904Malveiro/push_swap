@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:40:21 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/19 13:43:02 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/19 16:11:19 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,8 @@ void	stack_free(t_stack *s)
 
 int	stack_is_sorted(t_stack *s)
 {
-	int i;
+	int	i;
+
 	i = 0;
 	if (s->top == -1)
 		return (1);

@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:10:39 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/19 14:51:42 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:41:51 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,10 +42,12 @@ int	is_duplicate(t_stack *s, int n)
 	return (0);
 }
 
-void	error_exit(t_stack *s)
+void	error_exit(t_stack *a, t_stack *b)
 {
-	if (s)
-		stack_free(s);
+	if (a)
+		stack_free(a);
+	if (b)
+		stack_free(b);
 	write(2, "Error\n", 6);
 	exit(1);
 }

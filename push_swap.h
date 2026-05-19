@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/19 15:53:36 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/19 17:42:58 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void	stack_free(t_stack *s);
 int		stack_is_sorted(t_stack *s);
 int		is_number(char *s);
 int		is_duplicate(t_stack *s, int n);
+void	error_exit(t_stack *a, t_stack *b);
 long	compute_disorder(t_stack *a);
-void	error_exit(t_stack *s);
 void	sa(t_stack *a);
 void	sb(t_stack *b);
 void	ss(t_stack *a, t_stack *b);
