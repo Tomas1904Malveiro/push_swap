@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 17:42:10 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:07:24 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	main(int argc, char **argv)
 		b = stack_new(argc - 1);
 		while (i < argc)
 		{
-			if (!is_number(argv[i]))
+			if (is_number(argv[i]))
 				error_exit(a, b);
 			// n = ft_atoi(argv[i]); usar atoi do libft
 			if (is_duplicate(a, n))

@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:10:39 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/19 17:41:51 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/19 18:07:19 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ int	is_number(char *s)
 	while (s[i])
 	{
 		if (s[i] < '0' || s[i] > '9')
-			return (0);
+			return (1);
 		i++;
 	}
-	return (1);
+	return (0);
 }
 
 int	is_duplicate(t_stack *s, int n)
