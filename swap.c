@@ -14,7 +14,7 @@
 
 void	sa(t_stack *a)
 {
-	int temp;
+	int	temp;
 
 	if (!a || a->top < 1)
 		return ;
@@ -25,7 +25,7 @@ void	sa(t_stack *a)
 
 void	sb(t_stack *b)
 {
-	int temp;
+	int	temp;
 
 	if (!b || b->top < 1)
 		return ;

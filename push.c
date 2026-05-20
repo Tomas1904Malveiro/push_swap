@@ -14,10 +14,18 @@
 
 void	pa(t_stack *a, t_stack *b)
 {
-
+	if (!a || !b || b->top <= -1 || a->top >= (a->size - 1))
+		return ;
+	a->top++;
+	a->data[a->top] = b->data[b->top];
+	b->top--;
 }
 
 void	pb(t_stack *a, t_stack *b)
 {
-	
+	if (!a || !b || a->top <= -1 || b->top >= (b->size - 1))
+		return ;
+	b->top++;
+	b->data[b->top] = a->data[a->top];
+	a->top--;
 }
