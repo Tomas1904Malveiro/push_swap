@@ -21,14 +21,14 @@ void	selection_sort(t_stack *a, t_stack *b)
 	while (a->top > -1)
 	{
 		min = stack_min(a);
-		if (min == a->data[a->top - 1] && a->top > 0)
+		if (min == a->data[i - 1] && i > 0)
 			sa(a);
-		else if (min != a->data[a->top] && a->top > 0)
+		else if (min != a->data[i] && i > 0)
 		{
-			while (min != a->data[a->top])
+			while (min != a->data[i])
 				rra(a);
 		}
-		if (min == a->data[a->top])
+		if (min == a->data[i])
 			pb(a, b);
 	}
 	while (b->top > -1)

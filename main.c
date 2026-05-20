@@ -45,7 +45,7 @@ int	main(int argc, char **argv)
 		{
 			disorder = compute_disorder(a);
 			if (disorder < 0.2)
-				algo_simple(a, b);
+				selection_sort(a, b);
 			else if (disorder < 0.5)
 				algo_medium(a, b);
 			else
