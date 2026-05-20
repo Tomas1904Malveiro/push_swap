@@ -6,13 +6,13 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:34:27 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/20 14:17:07 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/20 14:51:39 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-long	compute_disorder(t_stack *a)
+double	compute_disorder(t_stack *a)
 {
 	long	mistakes;
 	long	total_pairs;
@@ -36,5 +36,5 @@ long	compute_disorder(t_stack *a)
 		}
 		i++;
 	}
-	return (mistakes * 100 / total_pairs);
+	return ((double)mistakes / total_pairs);
 }

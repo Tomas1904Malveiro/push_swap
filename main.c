@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/20 13:54:29 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/20 14:58:04 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,16 +34,23 @@ int	main(int argc, char **argv)
 {
 	t_stack	*a;
 	t_stack	*b;
+	double	disorder;
 
 	if (argc > 1)
 	{
 		a = stack_new(argc - 1);
 		b = stack_new(argc - 1);
 		parse_args(argc, argv, a, b);
-		if (!stack_is_sorted(a))
+		/*if (!stack_is_sorted(a))
 		{
-			// colocar algoritmos aqui para ordenar
-		}
+			disorder = compute_disorder(a);
+			if (disorder < 0.2)
+				algo_simple(a, b);
+			else if (disorder < 0.5)
+				algo_medium(a, b);
+			else
+				algo_complex(a, b);
+		}*/
 		stack_free(a);
 		stack_free(b);
 	}
