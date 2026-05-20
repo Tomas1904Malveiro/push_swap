@@ -12,16 +12,25 @@
 
 #include "push_swap.h"
 
-void	insertion_sort(t_stack *a, t_stack *b)
+void	selection_sort(t_stack *a, t_stack *b)
 {
 	int	i;
+	int	min;
 
 	i = a->top;
-	while (i <= 0)
+	while (a->top > -1)
 	{
-		if (a->data[a->top] > a->data[a->top - 1])
+		min = stack_min(a);
+		if (min == a->data[a->top - 1] && a->top > 0)
 			sa(a);
-		
-		i--;
+		else if (min != a->data[a->top] && a->top > 0)
+		{
+			while (min != a->data[a->top])
+				rra(a);
+		}
+		if (min == a->data[a->top])
+			pb(a, b);
 	}
+	while (b->top > -1)
+		pa(a, b);
 }
