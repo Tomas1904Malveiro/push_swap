@@ -59,8 +59,9 @@ int	stack_min(t_stack *s)
 
 int	stack_max(t_stack *s)
 {
-	int max;
-	int i;
+	int	max;
+	int	i;
+
 	max = s->data[0];
 	i = 1;
 	while (i <= s->top)
