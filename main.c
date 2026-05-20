@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/20 11:57:50 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/20 13:54:29 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,18 @@
 
 void	parse_args(int argc, char **argv, t_stack *a, t_stack *b)
 {
-	int	i;	
+	int	i;
 	int	n;
 
 	i = 1;
 	while (i < argc)
 	{
-		if (is_number(argv[i]))
+		if (!is_number(argv[i]))
 			error_exit(a, b);
-		// n = ft_atoi(argv[i]); usar atoi do libft
+		n = ft_atoi(argv[i]);
 		if (is_duplicate(a, n))
 			error_exit(a, b);
+		stack_push(a, n);
 		i++;
 	}
 }
