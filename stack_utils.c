@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/20 10:47:37 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/20 13:29:23 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/20 15:26:48 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	stack_push(t_stack *s, int n)
 	s->data[s->top] = n;
 }
 
-int	stack_pop(t_stack *s)
+/*int	stack_pop(t_stack *s)
 {
 	int	n;
 
@@ -29,7 +29,7 @@ int	stack_pop(t_stack *s)
 	n = s->data[s->top];
 	s->top--;
 	return (n);
-}
+}*/
 
 int	stack_peek(t_stack *s)
 {
