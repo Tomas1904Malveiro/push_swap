@@ -41,16 +41,16 @@ int	main(int argc, char **argv)
 		a = stack_new(argc - 1);
 		b = stack_new(argc - 1);
 		parse_args(argc, argv, a, b);
-		/*if (!stack_is_sorted(a))
+		if (!stack_is_sorted(a))
 		{
 			disorder = compute_disorder(a);
 			if (disorder < 0.2)
 				selection_sort(a, b);
-			else if (disorder < 0.5)
-				algo_medium(a, b);
-			else
-				algo_complex(a, b);
-		}*/
+			// else if (disorder < 0.5)
+			// 	algo_medium(a, b);
+			// else
+			// 	algo_complex(a, b);
+		}
 		stack_free(a);
 		stack_free(b);
 	}
