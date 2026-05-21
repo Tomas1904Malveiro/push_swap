@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/21 12:11:22 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:55:29 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int	main(int argc, char **argv)
 		parse_args(argc, argv, a, b);
 		if (!stack_is_sorted(a))
 		{
+			selection_sort(a, b);
 			disorder = compute_disorder(a);
 			if (disorder < 0.2)
 				selection_sort(a, b);
