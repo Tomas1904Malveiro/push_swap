@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbezerra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:07:28 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 17:07:31 by kbezerra         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:11:29 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	ra(t_stack *a)
 		i--;
 	}
 	a->data[0] = temp;
+	write(1, "ra\n", 3);
 }
 
 void	rb(t_stack *b)
@@ -40,10 +41,12 @@ void	rb(t_stack *b)
 		i--;
 	}
 	b->data[0] = temp;
+	write(1, "rb\n", 3);
 }
 
 void	rr(t_stack *a, t_stack *b)
 {
 	ra(a);
 	rb(b);
+	write(1, "rr\n", 3);
 }

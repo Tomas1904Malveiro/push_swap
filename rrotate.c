@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rrotate.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbezerra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:09:56 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 17:09:58 by kbezerra         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:11:17 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ void	rra(t_stack *a)
 		i++;
 	}
 	a->data[a->top] = temp;
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_stack *b)
@@ -40,10 +41,12 @@ void	rrb(t_stack *b)
 		i++;
 	}
 	b->data[b->top] = temp;
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack *a, t_stack *b)
 {
 	rra(a);
 	rrb(b);
+	write(1, "rrr\n", 4);
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kbezerra <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:06:29 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/19 17:06:31 by kbezerra         ###   ########.fr       */
+/*   Updated: 2026/05/21 16:07:42 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	pa(t_stack *a, t_stack *b)
 	a->top++;
 	a->data[a->top] = b->data[b->top];
 	b->top--;
+	write(1, "pa\n", 3);
 }
 
 void	pb(t_stack *a, t_stack *b)
@@ -28,4 +29,5 @@ void	pb(t_stack *a, t_stack *b)
 	b->top++;
 	b->data[b->top] = a->data[a->top];
 	a->top--;
+	write(1, "pb\n", 3);
 }
