@@ -6,13 +6,14 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/20 14:55:44 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/21 14:55:31 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+#include "libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 
