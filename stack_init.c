@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:40:21 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/20 10:50:26 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/25 10:08:03 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,14 +42,14 @@ int	stack_is_sorted(t_stack *s)
 {
 	int	i;
 
-	i = 0;
 	if (s->top == -1)
 		return (1);
-	while (i < s->top)
+	i = s->top;
+	while (i > 0)
 	{
-		if (s->data[i] > s->data[i + 1])
+		if (s->data[i] > s->data[i - 1])
 			return (0);
-		i++;
+		i--;
 	}
 	return (1);
 }

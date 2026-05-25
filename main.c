@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/21 16:55:29 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/25 16:05:11 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	parse_args(int argc, char **argv, t_stack *a, t_stack *b)
 	int	i;
 	int	n;
 
-	i = 1;
-	while (i < argc)
+	i = argc - 1;
+	while (i > 0)
 	{
 		if (!is_number(argv[i]))
 			error_exit(a, b);
@@ -26,7 +26,7 @@ void	parse_args(int argc, char **argv, t_stack *a, t_stack *b)
 		if (is_duplicate(a, n))
 			error_exit(a, b);
 		stack_push(a, n);
-		i++;
+		i--;
 	}
 }
 
@@ -47,7 +47,7 @@ int	main(int argc, char **argv)
 			disorder = compute_disorder(a);
 			if (disorder < 0.2)
 				selection_sort(a, b);
-			// else if (disorder < 0.5)
+			// else if (disorder <= 0.5)
 			// 	algo_medium(a, b);
 			// else
 			// 	algo_complex(a, b);
