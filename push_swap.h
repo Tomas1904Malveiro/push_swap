@@ -6,14 +6,14 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/21 14:55:31 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/26 17:33:43 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-#include "libft/libft.h"
+# include "libft/libft.h"
 # include <unistd.h>
 # include <stdlib.h>
 
@@ -32,6 +32,7 @@ int			is_duplicate(t_stack *s, int n);
 void		error_exit(t_stack *a, t_stack *b);
 double		compute_disorder(t_stack *a);
 void		parse_args(int argc, char **argv, t_stack *a, t_stack *b);
+void		free_result(char **result, size_t i);
 void		stack_push(t_stack *s, int n);
 int			stack_pop(t_stack *s);
 int			stack_peek(t_stack *s);
