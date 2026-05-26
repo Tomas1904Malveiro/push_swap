@@ -6,29 +6,11 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/25 16:05:11 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/26 17:23:15 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-void	parse_args(int argc, char **argv, t_stack *a, t_stack *b)
-{
-	int	i;
-	int	n;
-
-	i = argc - 1;
-	while (i > 0)
-	{
-		if (!is_number(argv[i]))
-			error_exit(a, b);
-		n = ft_atoi(argv[i]);
-		if (is_duplicate(a, n))
-			error_exit(a, b);
-		stack_push(a, n);
-		i--;
-	}
-}
 
 int	main(int argc, char **argv)
 {
