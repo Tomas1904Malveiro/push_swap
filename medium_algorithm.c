@@ -11,8 +11,9 @@
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdio.h>
 
-void	selection_sortarray(int *array, t_stack *a)
+static void	selection_sortarray(int *array, t_stack *a)
 {
 	int	i;
 	int	j;
@@ -36,7 +37,7 @@ void	selection_sortarray(int *array, t_stack *a)
 	}
 }
 
-int	*stack_copy(t_stack *a)
+static int	*stack_copy(t_stack *a)
 {
 	int		*array;
 	int		i;
@@ -54,7 +55,7 @@ int	*stack_copy(t_stack *a)
 	return (array);
 }
 
-void	index_stack(t_stack *a)
+static void	index_stack(t_stack *a)
 {
 	int	*sorted;
 	int	i;
@@ -67,15 +68,15 @@ void	index_stack(t_stack *a)
 	while (i <= a->top)
 	{
 		j = 0;
-		while (sorted[i] != a->data[j])
+		while (sorted[j] != a->data[i])
 			j++;
-		a->data[j] = i;
+		a->data[i] = j;
 		i++;
 	}
 	free(sorted);
 }
 
-int	ft_sqrt(int nb)
+static int	ft_sqrt(int nb)
 {
 	int	i;
 
@@ -85,15 +86,43 @@ int	ft_sqrt(int nb)
 		return (0);
 	}
 	while (i <= 46340 && i * i <= nb)
-	{
-		if (i * i == nb)
-			return (i);
 		i++;
-	}
-	return (0);
+	return (i - 1);
 }
 
 void chunk_sorting(t_stack *a, t_stack *b)
 {
-	
+	int chunk_size;
+	int	chunk_min;
+	int chunk_max;
+
+	index_stack(a);
+	chunk_size = ft_sqrt(a->size);
+	chunk_min = 0;
+	chunk_max = chunk_size - 1;
+	while (a->top > -1)
+	{
+		printf("%d\n", a->data[a->top]);
+		if (a->data[a->top] >= 10 && a->data[a->top] <= 60)
+		{
+			printf("erro aqui\n");
+			printf("erro aqui\n");
+			printf("erro aqui\n");
+			printf("erro aqui\n");
+			printf("erro aqui\n");
+			pb(a, b);
+			if (b->size == chunk_max && chunk_max)
+			{
+				chunk_min += chunk_size;
+				chunk_max += chunk_size;
+			}
+		}
+		else
+		{
+			ra(a);
+			printf("%d depois do ra\n", a->data[a->top]);
+		}
+	}
+	while (b->top > -1)
+		selection_sort(a, b);
 }

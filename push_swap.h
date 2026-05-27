@@ -40,6 +40,7 @@ int			stack_peek(t_stack *s);
 int			stack_min(t_stack *s);
 int			stack_max(t_stack *s);
 void		selection_sort(t_stack *a, t_stack *b);
+void		chunk_sorting(t_stack *a, t_stack *b);
 void		sa(t_stack *a);
 void		sb(t_stack *b);
 void		ss(t_stack *a, t_stack *b);

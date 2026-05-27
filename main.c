@@ -25,7 +25,8 @@ int	main(int argc, char **argv)
 		parse_args(argc, argv, a, b);
 		if (!stack_is_sorted(a))
 		{
-			selection_sort(a, b);
+			// selection_sort(a, b);
+			chunk_sorting(a, b);
 			disorder = compute_disorder(a);
 			if (disorder < 0.2)
 				selection_sort(a, b);
