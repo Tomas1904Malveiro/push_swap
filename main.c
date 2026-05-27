@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/26 17:23:15 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/27 11:17:09 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ int	main(int argc, char **argv)
 
 	if (argc > 1)
 	{
-		a = stack_new(argc - 1);
-		b = stack_new(argc - 1);
+		a = stack_new(count_args(argc, argv));
+		b = stack_new(count_args(argc, argv));
 		parse_args(argc, argv, a, b);
 		if (!stack_is_sorted(a))
 		{
