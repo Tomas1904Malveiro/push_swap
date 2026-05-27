@@ -43,7 +43,7 @@ static void	handle_arg(char *str, t_stack *a, t_stack *b)
 		handle_numbers(split[j], a, b);
 		j--;
 	}
-	// free_result(split, count);
+	free_result(split, count);
 }
 
 void	parse_args(int argc, char **argv, t_stack *a, t_stack *b)
