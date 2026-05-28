@@ -4,7 +4,7 @@ LIBFT_PATH = libft/
 LIBFT = $(LIBFT_PATH)libft.a
 SRCS = compute_disorder.c errors.c main.c push.c rotate.c \
        rrotate.c simple_algorithm.c stack_init.c stack_utils.c swap.c \
-	   parse_args.c flags.c
+	   parse_args.c flags.c medium_algorithm.c
 OBJS = $(SRCS:.c=.o)
 
 all: $(NAME)

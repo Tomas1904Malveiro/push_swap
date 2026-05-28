@@ -20,16 +20,19 @@ void	stack_push(t_stack *s, int n)
 	s->data[s->top] = n;
 }
 
-/*int	stack_pop(t_stack *s) nao esta a ser usada
+int	ft_sqrt(int nb)
 {
-	int	n;
+	int	i;
 
-	if (s->top == -1)
-		return (-1);
-	n = s->data[s->top];
-	s->top--;
-	return (n);
-}*/
+	i = 1;
+	if (nb <= 0)
+	{
+		return (0);
+	}
+	while (i <= 46340 && i * i <= nb)
+		i++;
+	return (i - 1);
+}
 
 int	stack_peek(t_stack *s)
 {

@@ -49,7 +49,7 @@ void	sort_stack(int flag, t_stack *a, t_stack *b)
 	// 	algo_complex(a, b);
 	else
 	{
-		selection_sort(a, b); //so para testar caso nao tenha flag
+		chunk_sorting(a, b); //so para testar caso nao tenha flag
         disorder = compute_disorder(a);
 		// if (disorder < 0.2)
 		//     selection_sort(a, b);

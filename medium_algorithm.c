@@ -76,53 +76,49 @@ static void	index_stack(t_stack *a)
 	free(sorted);
 }
 
-static int	ft_sqrt(int nb)
+static void	push_chunks(t_stack *a, t_stack *b, int chunk_size)
 {
-	int	i;
-
-	i = 1;
-	if (nb <= 0)
-	{
-		return (0);
-	}
-	while (i <= 46340 && i * i <= nb)
-		i++;
-	return (i - 1);
-}
-
-void chunk_sorting(t_stack *a, t_stack *b)
-{
-	int chunk_size;
 	int	chunk_min;
-	int chunk_max;
+	int	chunk_max;
 
-	index_stack(a);
-	chunk_size = ft_sqrt(a->size);
 	chunk_min = 0;
 	chunk_max = chunk_size - 1;
 	while (a->top > -1)
 	{
-		printf("%d\n", a->data[a->top]);
-		if (a->data[a->top] >= 10 && a->data[a->top] <= 60)
+		if (a->data[a->top] >= chunk_min && a->data[a->top] <= chunk_max)
 		{
-			printf("erro aqui\n");
-			printf("erro aqui\n");
-			printf("erro aqui\n");
-			printf("erro aqui\n");
-			printf("erro aqui\n");
 			pb(a, b);
-			if (b->size == chunk_max && chunk_max)
+			if (b->top == chunk_max)
 			{
 				chunk_min += chunk_size;
 				chunk_max += chunk_size;
 			}
 		}
 		else
-		{
 			ra(a);
-			printf("%d depois do ra\n", a->data[a->top]);
-		}
 	}
+}
+
+
+void chunk_sorting(t_stack *a, t_stack *b)
+{
+	int	max_pos;
+	int	max;
+
+	index_stack(a);
+	push_chunks(a, b, ft_sqrt(a->size));
 	while (b->top > -1)
-		selection_sort(a, b);
+	{
+		max = stack_max(b);
+		max_pos = 0;
+		while (b->data[max_pos] != max)
+			max_pos++;
+		if (max_pos <= b->top / 2)
+			while (b->data[b->top] != max)
+				rrb(b);
+		else
+			while (b->data[b->top] != max)
+				rb(b);
+		pa(a, b);
+	}
 }
