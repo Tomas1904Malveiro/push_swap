@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:03:24 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/27 16:56:53 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/28 14:35:32 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ void	sort_stack(int flag, t_stack *a, t_stack *b)
 
 	if (flag == 1)
 		selection_sort(a, b);
-	// else if (flag == 2)
-	// 	algo_medium(a, b);
+	else if (flag == 2)
+		chunk_sorting(a, b);
 	// else if (flag == 3)
 	// 	algo_complex(a, b);
 	else
