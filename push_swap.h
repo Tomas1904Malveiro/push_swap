@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/27 16:56:45 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/05/29 16:47:05 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void		selection_sort(t_stack *a, t_stack *b);
 void		chunk_sorting(t_stack *a, t_stack *b);
 int 		check_flags(int argc, char **argv);
 void		sort_stack(int flag, t_stack *a, t_stack *b);
+void 		radix_sort(t_stack *a, t_stack *b);
 void		sa(t_stack *a);
 void		sb(t_stack *b);
 void		ss(t_stack *a, t_stack *b);

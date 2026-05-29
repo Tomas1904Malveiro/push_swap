@@ -5,3 +5,5 @@ https://medium.com/@CastleScribble/how-to-print-to-stderr-standard-error-in-c-us
 https://www.geeksforgeeks.org/c/c-program-for-insertion-sort/
 https://www.treinaweb.com.br/blog/conheca-os-principais-algoritmos-de-ordenacao
 https://satyadeepmaheshwari.medium.com/sorting-large-datasets-with-limited-memory-the-chunked-merge-sort-approach-318275275c81
+https://www.geeksforgeeks.org/c/c-program-for-radix-sort/
+https://learn.microsoft.com/pt-br/cpp/c-language/c-bitwise-operators?view=msvc-170
