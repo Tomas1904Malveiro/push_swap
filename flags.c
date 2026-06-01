@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:03:24 by tochaves          #+#    #+#             */
-/*   Updated: 2026/06/01 13:13:34 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/01 16:23:58 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	check_flags(int argc, char **argv)
 
 void	sort_stack(int flag, t_stack *a, t_stack *b)
 {
-	double disorder;
+	double	disorder;
 
 	if (flag == 1)
 		selection_sort(a, b);
@@ -49,13 +49,12 @@ void	sort_stack(int flag, t_stack *a, t_stack *b)
 		radix_sort(a, b);
 	else
 	{
-		chunk_sorting(a, b); //so para testar caso nao tenha flag
-        disorder = compute_disorder(a);
-		// if (disorder < 0.2)
-		//     selection_sort(a, b);
-		// else if (disorder <= 0.5)
-		// 	algo_medium(a, b);
-		// else
-		// 	algo_complex(a, b);
+		disorder = compute_disorder(a);
+		if (disorder < 0.2)
+			selection_sort(a, b);
+		else if (disorder <= 0.5)
+			chunk_sorting(a, b);
+		else
+			radix_sort(a, b);
 	}
 }
