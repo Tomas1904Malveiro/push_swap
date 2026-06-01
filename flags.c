@@ -20,6 +20,8 @@ static int	get_flag(char *arg)
 		return (2);
 	if (ft_strncmp(arg, "--complex", 10) == 0)
 		return (3);
+	if (ft_strncmp(arg, "--bench", 7) == 0)
+		return (4);
 	if (ft_strncmp(arg, "--adaptive", 11) == 0)
 		return (0);
 	return (0);
@@ -47,6 +49,10 @@ void	sort_stack(int flag, t_stack *a, t_stack *b)
 		chunk_sorting(a, b);
 	else if (flag == 3)
 		radix_sort(a, b);
+	else if (flag == 4)
+	{	
+		// benchmark
+	}
 	else
 	{
 		disorder = compute_disorder(a);
