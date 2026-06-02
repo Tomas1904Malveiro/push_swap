@@ -76,7 +76,7 @@ static void	index_stack(t_stack *a)
 	free(sorted);
 }
 
-static void	push_chunks(t_stack *a, t_stack *b, int chunk_size)
+static void	push_chunks(t_stack *a, t_stack *b, int chunk_size, t_benchmark *bench)
 {
 	int	chunk_min;
 	int	chunk_max;
@@ -87,7 +87,7 @@ static void	push_chunks(t_stack *a, t_stack *b, int chunk_size)
 	{
 		if (a->data[a->top] >= chunk_min && a->data[a->top] <= chunk_max)
 		{
-			pb(a, b);
+			pb(a, b, bench);
 			if (b->top == chunk_max)
 			{
 				chunk_min += chunk_size;
@@ -95,18 +95,18 @@ static void	push_chunks(t_stack *a, t_stack *b, int chunk_size)
 			}
 		}
 		else
-			ra(a);
+			ra(a, bench);
 	}
 }
 
 
-void chunk_sorting(t_stack *a, t_stack *b)
+void chunk_sorting(t_stack *a, t_stack *b, t_benchmark *bench)
 {
 	int	max_pos;
 	int	max;
 
 	index_stack(a);
-	push_chunks(a, b, ft_sqrt(a->size));
+	push_chunks(a, b, ft_sqrt(a->size), bench);
 	while (b->top > -1)
 	{
 		max = stack_max(b);
@@ -115,10 +115,10 @@ void chunk_sorting(t_stack *a, t_stack *b)
 			max_pos++;
 		if (max_pos <= b->top / 2)
 			while (b->data[b->top] != max)
-				rrb(b);
+				rrb(b, bench);
 		else
 			while (b->data[b->top] != max)
-				rb(b);
-		pa(a, b);
+				rb(b, bench);
+		pa(a, b, bench);
 	}
 }

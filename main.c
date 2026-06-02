@@ -16,22 +16,28 @@ int	main(int argc, char **argv)
 {
 	t_stack	*a;
 	t_stack	*b;
+	t_benchmark *bench;
+
+	bench = bench_stats();
 	int flag;
 	if (argc > 1)
 	{
-		flag = check_flags(argc, argv);
+		flag = check_flags(argc, argv, bench);
 		if (argc > 1 && argv[1][0] == '-' && argv[1][1] == '-')
 		{
 			argv++;
 			argc--;
+			if (argc > 1 && argv[1][0] == '-' && argv[1][1] == '-')
+			{
+				argv++;
+				argc--;
+			}
 		}
 		a = stack_new(count_args(argc, argv));
 		b = stack_new(count_args(argc, argv));
 		parse_args(argc, argv, a, b);
 		if (!stack_is_sorted(a))
-		{
-			sort_stack(flag, a, b);
-		}
+			sort_stack(flag, a, b, bench);
 		stack_free(a);
 		stack_free(b);
 	}

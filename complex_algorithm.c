@@ -86,7 +86,7 @@ static void	index_stack(t_stack *a)
 	free(sorted);
 }
 
-void	radix_sort(t_stack *a, t_stack *b)
+void	radix_sort(t_stack *a, t_stack *b, t_benchmark *bench)
 {
 	int	size;
 	int	max_bits;
@@ -103,13 +103,13 @@ void	radix_sort(t_stack *a, t_stack *b)
 		while (i < size)
 		{
 			if ((a->data[a->top] >> bit) & 1)
-				ra(a);
+				ra(a, bench);
 			else
-				pb(a, b);
+				pb(a, b, bench);
 			i++;
 		}
 		while (b->top > -1)
-			pa(a, b);
+			pa(a, b, bench);
 		bit++;
 	}
 }

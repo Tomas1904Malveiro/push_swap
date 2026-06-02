@@ -12,32 +12,32 @@
 
 #include "push_swap.h"
 
-void	selection_sort3num(t_stack *a)
+void	selection_sort3num(t_stack *a, t_benchmark *bench)
 {
 	while (stack_is_sorted(a) < 1)
 	{
 		if (a->data[a->top] == stack_max(a))
-			ra(a);
+			ra(a, bench);
 		if (a->data[a->top - 1] == stack_max(a))
-			rra(a);
+			rra(a, bench);
 		if (a->data[a->top] > a->data[a->top - 1])
-			sa(a);
+			sa(a, bench);
 	}
 }
 
-void	selection_sort(t_stack *a, t_stack *b)
+void	selection_sort(t_stack *a, t_stack *b, t_benchmark *bench)
 {
 	while (a->top > 2)
 	{
 		while (stack_peek(a) != stack_min(a))
-			ra(a);
-		pb(a, b);
+			ra(a, bench);
+		pb(a, b, bench);
 	}
-	selection_sort3num(a);
+	selection_sort3num(a, bench);
 	while (b->top > -1)
 	{
 		while (stack_peek(b) != stack_max(b))
-			rb(b);
-		pa(a, b);
+			rb(b, bench);
+		pa(a, b, bench);
 	}
 }

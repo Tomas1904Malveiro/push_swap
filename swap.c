@@ -12,7 +12,7 @@
 
 #include "push_swap.h"
 
-void	sa(t_stack *a)
+void	sa(t_stack *a, t_benchmark *bench)
 {
 	int	temp;
 
@@ -21,10 +21,13 @@ void	sa(t_stack *a)
 	temp = a->data[a->top];
 	a->data[a->top] = a->data[a->top - 1];
 	a->data[a->top - 1] = temp;
-	write(1, "sa\n", 3);
+	bench->sa++;
+	bench->total_ops++;
+	if (bench->benchmark_mode == 0)
+		write(1, "sa\n", 3);
 }
 
-void	sb(t_stack *b)
+void	sb(t_stack *b, t_benchmark *bench)
 {
 	int	temp;
 
@@ -33,12 +36,17 @@ void	sb(t_stack *b)
 	temp = b->data[b->top];
 	b->data[b->top] = b->data[b->top - 1];
 	b->data[b->top - 1] = temp;
-	write(1, "sb\n", 3);
+	bench->sb++;
+	bench->total_ops++;
+	if (bench->benchmark_mode == 0)
+		write(1, "sb\n", 3);
 }
 
-void	ss(t_stack *a, t_stack *b)
+void	ss(t_stack *a, t_stack *b, t_benchmark *bench)
 {
-	sa(a);
-	sb(b);
-	write(1, "ss\n", 3);
+	sa(a, bench);
+	sb(b, bench);
+	bench->ss++;
+	if (bench->benchmark_mode == 0)
+		write(1, "ss\n", 3);
 }
