@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/29 16:47:05 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/04 15:31:11 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ void		error_exit(t_stack *a, t_stack *b);
 double		compute_disorder(t_stack *a);
 void		parse_args(int argc, char **argv, t_stack *a, t_stack *b);
 int			count_args(int argc, char **argv);
-void		free_double(char **dest, int j);
+void		free_result(char **result, size_t i);
 void		stack_push(t_stack *s, int n);
 int			ft_sqrt(int nb);
 int			stack_peek(t_stack *s);

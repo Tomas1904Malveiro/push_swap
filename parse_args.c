@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 17:23:00 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/29 15:28:41 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/04 15:31:48 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static void	handle_arg(char *str, t_stack *a, t_stack *b)
 		handle_numbers(split[j], a, b);
 		j--;
 	}
-	free_double(split, count);
+	free_result(split, count);
 }
 
 void	parse_args(int argc, char **argv, t_stack *a, t_stack *b)
