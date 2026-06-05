@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:03:24 by tochaves          #+#    #+#             */
-/*   Updated: 2026/06/01 16:23:58 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/05 16:33:14 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,17 @@ void	bench_strategy(t_benchmark *bench, t_stack *a, t_stack *b)
 	
 	disorder = compute_disorder(a);
 	if (bench->benchmark_alg == 1)
-		printf("[bench] strategy: Simple / O(n^2)\n");
+		ft_printf("[bench] strategy: Simple / O(n^2)\n");
 	else if(bench->benchmark_alg == 2)
-		printf("[bench] strategy: Medium / O(n√n)\n");
+		ft_printf("[bench] strategy: Medium / O(n√n)\n");
 	else if (bench->benchmark_alg == 3)
-		printf("[bench] strategy: Complex / O(n log n)\n");
+		ft_printf("[bench] strategy: Complex / O(n log n)\n");
 	else if (disorder < 0.2)
-		printf("[bench] strategy: Adaptive / O(n^2)\n");
+		ft_printf("[bench] strategy: Adaptive / O(n^2)\n");
 	else if (disorder <= 0.5)
-		printf("[bench] strategy: Adaptive / O(n√n)\n");
+		ft_printf("[bench] strategy: Adaptive / O(n√n)\n");
 	else
-		printf("[bench] strategy: Adaptive / O(n log n)\n");
+		ft_printf("[bench] strategy: Adaptive / O(n log n)\n");
 	if (bench->benchmark_alg == 1 || disorder < 0.2)
 		selection_sort(a, b, bench);
 	else if (bench->benchmark_alg == 2 || disorder < 0.5)
@@ -73,13 +73,13 @@ void	bench_flag(t_benchmark *bench, t_stack *a, t_stack *b)
 	
 	disorder = compute_disorder(a);
 	bench->benchmark_mode = 1;
-	printf("[bench] disorder: %f%%\n", disorder);
+	// printf("[bench] disorder: %.2f%%\n", disorder * 100);
 	bench_strategy(bench, a, b);
-	printf("[bench] total_ops: %d\n", bench->total_ops);
-	printf("[bench] sa: %d sb: %d ss: %d ", bench->sa, bench->sb, bench->ss);
-	printf("pa: %d pb: %d\n", bench->pa, bench->pb);
-	printf("[bench] ra: %d rb: %d rr: %d ", bench->ra, bench->rb, bench->rr);
-	printf("rra: %d rrb: %d rrr: %d\n", bench->rra, bench->rrb, bench->rrr);
+	ft_printf("[bench] total_ops: %d\n", bench->total_ops);
+	ft_printf("[bench] sa: %d sb: %d ss: %d ", bench->sa, bench->sb, bench->ss);
+	ft_printf("pa: %d pb: %d\n", bench->pa, bench->pb);
+	ft_printf("[bench] ra: %d rb: %d rr: %d ", bench->ra, bench->rb, bench->rr);
+	ft_printf("rra: %d rrb: %d rrr: %d\n", bench->rra, bench->rrb, bench->rrr);
 }
 
 void	sort_stack(int flag, t_stack *a, t_stack *b, t_benchmark *bench)
