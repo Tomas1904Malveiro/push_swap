@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:29:48 by tochaves          #+#    #+#             */
-/*   Updated: 2026/06/05 16:12:40 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/05 18:18:39 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft/libft.h"
-# include "printf/ft_printf.h"
+# include "ft_printf/ft_printf.h"
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>
@@ -29,7 +29,6 @@ typedef struct stack
 typedef struct benchmark
 {
 	int benchmark_alg;
-	int benchmark_mode;
 	int	total_ops;
 	int	sa;
 	int	sb;

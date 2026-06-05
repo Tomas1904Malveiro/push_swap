@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:03:24 by tochaves          #+#    #+#             */
-/*   Updated: 2026/06/05 16:33:14 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/05 18:18:21 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,14 @@ void	bench_strategy(t_benchmark *bench, t_stack *a, t_stack *b)
 
 void	bench_flag(t_benchmark *bench, t_stack *a, t_stack *b)
 {
-	double	disorder;
+	int	disorder;
 	
-	disorder = compute_disorder(a);
-	bench->benchmark_mode = 1;
-	// printf("[bench] disorder: %.2f%%\n", disorder * 100);
+	disorder = compute_disorder(a) * 100;
+	ft_printf("[bench] disorder: %i.", disorder);
+	if ((disorder / 100) == 0)
+		ft_printf("00%%\n");
+	else
+		ft_printf("%i%%\n", disorder / 100);
 	bench_strategy(bench, a, b);
 	ft_printf("[bench] total_ops: %d\n", bench->total_ops);
 	ft_printf("[bench] sa: %d sb: %d ss: %d ", bench->sa, bench->sb, bench->ss);

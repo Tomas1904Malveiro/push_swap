@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/18 13:40:21 by tochaves          #+#    #+#             */
-/*   Updated: 2026/05/25 10:08:03 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/05 18:18:33 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,6 @@ t_benchmark	*bench_stats(void)
 	if (!bench)
 		return (NULL);
 	bench->benchmark_alg = 0;
-	bench->benchmark_mode = 0;
 	bench->total_ops = 0;
 	bench->sa = 0;
 	bench->sb = 0;

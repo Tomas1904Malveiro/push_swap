@@ -3,7 +3,7 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 LIBFT_PATH = libft/
 LIBFT = $(LIBFT_PATH)libft.a
-PRINTF_PATH = printf/
+PRINTF_PATH = ft_printf/
 PRINTF = $(PRINTF_PATH)libftprintf.a
 SRCS = compute_disorder.c errors.c main.c push.c rotate.c \
         rrotate.c simple_algorithm.c stack_init.c stack_utils.c \

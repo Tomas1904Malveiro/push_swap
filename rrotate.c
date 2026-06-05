@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 17:09:56 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/21 16:11:17 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/05 18:17:48 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,7 @@ void	rra(t_stack *a, t_benchmark *bench)
 	a->data[a->top] = temp;
 	bench->rra++;
 	bench->total_ops++;
-	if (bench->benchmark_mode == 0)
-		write(1, "rra\n", 4);
+	write(1, "rra\n", 4);
 }
 
 void	rrb(t_stack *b, t_benchmark *bench)
@@ -46,8 +45,7 @@ void	rrb(t_stack *b, t_benchmark *bench)
 	b->data[b->top] = temp;
 	bench->rrb++;
 	bench->total_ops++;
-	if (bench->benchmark_mode == 0)
-		write(1, "rrb\n", 4);
+	write(1, "rrb\n", 4);
 }
 
 void	rrr(t_stack *a, t_stack *b, t_benchmark *bench)
@@ -56,6 +54,5 @@ void	rrr(t_stack *a, t_stack *b, t_benchmark *bench)
 	rrb(b, bench);
 	bench->rrr++;
 	bench->total_ops++;
-	if (bench->benchmark_mode == 0)
-		write(1, "rrr\n", 4);
+	write(1, "rrr\n", 4);
 }

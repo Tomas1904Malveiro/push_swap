@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:34:27 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/05/20 14:51:39 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/05 18:04:36 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,17 +24,18 @@ double	compute_disorder(t_stack *a)
 	mistakes = 0;
 	total_pairs = 0;
 	i = 0;
-	while (i <= a->top - 1)
+	while (i < a->size - 1)
 	{
 		j = i + 1;
-		while (j <= a->top)
+		while (j < a->size)
 		{
-			total_pairs += 1;
+			total_pairs++;
 			if (a->data[i] > a->data[j])
-				mistakes += 1;
+				mistakes++;
 			j++;
 		}
 		i++;
 	}
+	mistakes = total_pairs - mistakes;
 	return ((double)mistakes / total_pairs);
 }
