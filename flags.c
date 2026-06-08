@@ -30,6 +30,7 @@ static int	get_flag(char *arg)
 int	check_flags(int argc, char **argv, t_benchmark *bench)
 {
 	int	flag;
+
 	flag = 0;
 	if (argc > 1 && argv[1][0] == '-' && argv[1][1] == '-')
 	{
@@ -42,14 +43,15 @@ int	check_flags(int argc, char **argv, t_benchmark *bench)
 	}
 	return (flag);
 }
+
 void	bench_strategy(t_benchmark *bench, t_stack *a, t_stack *b)
 {
 	double	disorder;
-	
+
 	disorder = compute_disorder(a);
 	if (bench->benchmark_alg == 1)
 		ft_printf("[bench] strategy: Simple / O(n^2)\n");
-	else if(bench->benchmark_alg == 2)
+	else if (bench->benchmark_alg == 2)
 		ft_printf("[bench] strategy: Medium / O(n√n)\n");
 	else if (bench->benchmark_alg == 3)
 		ft_printf("[bench] strategy: Complex / O(n log n)\n");
@@ -70,7 +72,7 @@ void	bench_strategy(t_benchmark *bench, t_stack *a, t_stack *b)
 void	bench_flag(t_benchmark *bench, t_stack *a, t_stack *b)
 {
 	int	disorder;
-	
+
 	disorder = compute_disorder(a) * 10000;
 	ft_printf("[bench] disorder: %i.", disorder / 100);
 	if ((disorder % 100) == 0)

@@ -28,7 +28,7 @@ typedef struct stack
 
 typedef struct benchmark
 {
-	int benchmark_alg;
+	int	benchmark_alg;
 	int	total_ops;
 	int	sa;
 	int	sb;
@@ -40,9 +40,8 @@ typedef struct benchmark
 	int	rr;
 	int	rra;
 	int	rrb;
-	int rrr;
-} t_benchmark;
-
+	int	rrr;
+}	t_benchmark;
 
 t_stack		*stack_new(int size);
 void		stack_free(t_stack *s);
@@ -62,9 +61,9 @@ int			stack_min(t_stack *s);
 int			stack_max(t_stack *s);
 void		selection_sort(t_stack *a, t_stack *b, t_benchmark *bench);
 void		chunk_sorting(t_stack *a, t_stack *b, t_benchmark *bench);
-int 		check_flags(int argc, char **argv, t_benchmark *bench);
+int			check_flags(int argc, char **argv, t_benchmark *bench);
 void		sort_stack(int flag, t_stack *a, t_stack *b, t_benchmark *bench);
-void 		radix_sort(t_stack *a, t_stack *b, t_benchmark *bench);
+void		radix_sort(t_stack *a, t_stack *b, t_benchmark *bench);
 void		sa(t_stack *a, t_benchmark *bench);
 void		sb(t_stack *b, t_benchmark *bench);
 void		ss(t_stack *a, t_stack *b, t_benchmark *bench);

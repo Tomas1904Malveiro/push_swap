@@ -23,6 +23,7 @@ static int	get_bits(int n)
 	}
 	return (bits);
 }
+
 static void	selection_sortarray(int *array, t_stack *a)
 {
 	int	i;
