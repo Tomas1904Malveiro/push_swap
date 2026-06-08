@@ -71,12 +71,12 @@ void	bench_flag(t_benchmark *bench, t_stack *a, t_stack *b)
 {
 	int	disorder;
 	
-	disorder = compute_disorder(a) * 100;
-	ft_printf("[bench] disorder: %i.", disorder);
-	if ((disorder / 100) == 0)
+	disorder = compute_disorder(a) * 10000;
+	ft_printf("[bench] disorder: %i.", disorder / 100);
+	if ((disorder % 100) == 0)
 		ft_printf("00%%\n");
 	else
-		ft_printf("%i%%\n", disorder / 100);
+		ft_printf("%i%%\n", disorder % 100);
 	bench_strategy(bench, a, b);
 	ft_printf("[bench] total_ops: %d\n", bench->total_ops);
 	ft_printf("[bench] sa: %d sb: %d ss: %d ", bench->sa, bench->sb, bench->ss);
