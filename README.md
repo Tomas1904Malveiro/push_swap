@@ -179,3 +179,9 @@ https://satyadeepmaheshwari.medium.com/sorting-large-datasets-with-limited-memor
 https://www.geeksforgeeks.org/c/c-program-for-radix-sort/
 
 https://learn.microsoft.com/pt-br/cpp/c-language/c-bitwise-operators?view=msvc-170
+
+---
+
+## Contributions
+
+* We literaly worked together on everything, and when at 42 working on different files git push and git pull.
