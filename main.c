@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/19 14:22:31 by kbezerra          #+#    #+#             */
-/*   Updated: 2026/06/04 15:52:07 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/11 14:10:43 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ int	main(int argc, char **argv)
 	t_benchmark	*bench;
 	int			flag;
 
-	bench = bench_stats();
 	if (argc > 1)
 	{
+		bench = bench_stats();
 		flag = check_flags(argc, argv, bench);
 		while (argc > 1 && argv[1][0] == '-' && argv[1][1] == '-')
 		{
@@ -35,6 +35,7 @@ int	main(int argc, char **argv)
 			sort_stack(flag, a, b, bench);
 		stack_free(a);
 		stack_free(b);
+		free(bench);
 	}
 	return (0);
 }

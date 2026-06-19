@@ -6,7 +6,7 @@
 /*   By: tochaves <tochaves@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 17:23:00 by tochaves          #+#    #+#             */
-/*   Updated: 2026/06/04 15:31:48 by tochaves         ###   ########.fr       */
+/*   Updated: 2026/06/11 14:12:41 by tochaves         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,15 @@
 
 static void	handle_numbers(char *str, t_stack *a, t_stack *b)
 {
-	int	n;
+	long	n;
 
 	if (!is_number(str))
 		error_exit(a, b);
+	if (ft_strlen(str) > 11)
+		error_exit(a, b);
 	n = ft_atoi(str);
+	if (n > 2147483647 || n < -2147483648)
+		error_exit(a, b);
 	if (is_duplicate(a, n))
 		error_exit(a, b);
 	stack_push(a, n);
